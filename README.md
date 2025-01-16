@@ -27,8 +27,9 @@
 
 ## Updates
 
-* 2025.1.16 Code Version 1 released (on base model Zeroscope, editing tasks including stylization & shape editing) 
-* Code will be made publicly available after meticulous internal review. Stay tuned ⭐ for updates!
+* [x] 2025.1.16 Code Version 1 released (on base model Zeroscope, editing tasks including stylization & shape editing) 
+
+* [x] Code will be made publicly available after meticulous internal review. Stay tuned ⭐ for updates!
 
 ## Citation
 
