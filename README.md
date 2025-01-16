@@ -1,6 +1,5 @@
-<div align="center">
-<h1> FreeMask: Rethinking the Importance of Attention Masks for Zero-shot Video Editing
-</h1>
+# FreeMask: Rethinking the Importance of Attention Masks for Zero-shot Video Editing
+
 
 
 
