@@ -16,6 +16,10 @@
 > Our approach can be seamlessly integrated into existing zero-shot video editing frameworks with better performance, requiring no control assistance or parameter fine-tuning but enabling adaptive decoupling of unedited semantic layouts with mask precision control. 
 > Extensive experiments demonstrate that FreeMask achieves superior semantic fidelity, temporal consistency, and editing quality compared to state-of-the-art methods.
 
+
+
+
+
 ## Updates
 
 * [x] 2025.1.16 Code Version 1 released (on base model Zeroscope, editing tasks including stylization & shape editing) 
