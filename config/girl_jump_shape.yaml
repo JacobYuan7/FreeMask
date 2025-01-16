@@ -1,0 +1,53 @@
+pretrained_model_path: "/mnt/workspace/cailingling/models/stable-diffusion-v1-4"
+
+dataset_config:
+    path: "dataset/frames/girl"
+    prompt: "a girl jump on the bed"
+    start_sample_frame: 0
+    n_sample_frame: 20
+    sampling_rate: 1
+
+
+editing_config:
+    cal_maps: False
+    use_invertion_latents: True
+    use_inversion_attention: True
+    guidance_scale: 7.5
+    editing_prompts: [
+        "a boy jump on the bed ",
+    ]
+    p2p_config:
+        0: 
+            is_replace_controller: True
+            use_inversion_attention: True
+            cross_replace_steps: 
+                default_: 0.5
+            self_replace_steps: 0.3
+            temp_replace_steps: 0.99
+            key_value_replace: True
+            blend_words: [['girl'], ['boy']] 
+            blend_self_attention:  True
+            blend_latents: False   
+            blend_th: [0.4, 0.4]      
+            
+    clip_length: "${..dataset_config.n_sample_frame}"
+    sample_seeds: [0]
+    
+
+    num_inference_steps: 50
+    prompt2prompt_edit: True
+
+    
+model_config:
+    lora: 160
+    SparseCausalAttention_index: ['mid'] 
+    least_sc_channel: 640
+
+test_pipeline_config:
+    target: video_diffusion.pipelines.p2p_ddim_spatial_temporal.P2pDDIMSpatioTemporalPipeline
+    num_inference_steps: "${..validation_sample_logger.num_inference_steps}"
+
+
+
+seed: 0
+

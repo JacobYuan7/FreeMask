@@ -1,0 +1,60 @@
+pretrained_model_path: "/mnt/workspace/cailingling/models/zeroscope_v2_576w"
+
+dataset_config:
+    path: "dataset/frames/giraffe"
+    prompt: "a giraffe on the grassland"
+    n_sample_frame: 8
+    sampling_rate: 1
+    stride: 80
+    offset: 
+        left: 0
+        right: 0
+        top: 0
+        bottom: 0
+
+
+editing_config:
+    cal_maps: False
+    use_invertion_latents: True
+    use_inversion_attention: True
+    guidance_scale: 7.5
+    editing_prompts: [
+        Ukiyo-e style painting of a giraffe on the grassland,
+    ]
+
+    p2p_config:
+        0:
+            cross_replace_steps: 
+                default_: 0.9
+            self_replace_steps: 0.01
+            temp_replace_steps: 0.9
+            key_value_replace: False
+            
+            eq_params: 
+                words: ["Ukiyo-e"]
+                values: [20] # amplify attention to the word "tiger" by *2 
+            use_inversion_attention: True
+            is_replace_controller: False
+
+
+            
+    clip_length: "${..dataset_config.n_sample_frame}"
+    sample_seeds: [0]
+
+    num_inference_steps: 50
+    prompt2prompt_edit: True
+
+    
+model_config:
+    lora: 160
+    SparseCausalAttention_index: ['mid'] 
+    least_sc_channel: 640
+
+test_pipeline_config:
+    target: video_diffusion.pipelines.p2p_ddim_spatial_temporal.P2pDDIMSpatioTemporalPipeline
+    num_inference_steps: "${..validation_sample_logger.num_inference_steps}"
+
+
+
+seed: 0
+
