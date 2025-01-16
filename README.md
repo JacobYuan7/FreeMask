@@ -3,15 +3,6 @@
 </h1>
 
 
-<div>
-    <a href="" target='_blank'>Lingling Cai</a>&emsp;
-    <a href='https://scholar.google.com/citations?hl=zh-CN&user=02H8RBIAAAAJ' target='_blank'>Kang Zhao</a>&emsp;
-    <a href='https://jacobyuan7.github.io/' target='_blank'>Hangjie Yuan</a>&emsp;
-    <a href='https://scholar.google.com/citations?user=16RDSEUAAAAJ&hl=en' target='_blank'>Yingya Zhang</a>&emsp;
-    <a href='https://scholar.google.com/citations?user=ZO3OQ-8AAAAJ&hl=en&oi=ao' target='_blank'>Shiwei Zhang</a>&emsp;
-<!--     Yining Pan&emsp;<br> -->
-    <a href='https://scholar.google.com/citations?hl=zh-CN&user=6tSoD98AAAAJ' target='_blank'>Kejiang Huang&#9993</a>&emsp;
-</div>
 
 ![colored_mesh (/Users/cailingling/Downloads/FreeMask-main 2/assets/framework.jpg)](assets/framework.jpg)
 
@@ -28,6 +19,8 @@
 ## Updates
 
 * [x] 2025.1.16 Code Version 1 released (on base model Zeroscope, editing tasks including stylization & shape editing) 
+
+* [x] 🎉 2024.12.9 Accepted by AAAI2025！
 
 * [x] Code will be made publicly available after meticulous internal review. Stay tuned ⭐ for updates!
 
